@@ -1,0 +1,17 @@
+
+<p>
+  <strong>Card:</strong>
+  <%= @loan.card.name %>
+</p>
+
+<p>
+  <strong>Book:</strong>
+  <%= @loan.book.title %>
+</p>
+
+<p>
+  <strong>Expiry date:</strong>
+  <%= @loan.expiry_date %>
+</p>
+
+<%= link_to 'Back', loans_path %>
