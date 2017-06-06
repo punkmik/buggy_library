@@ -1,0 +1,43 @@
+<h1>Check Out Books</h1>
+
+<%= form_for @check_out, html: {class: 'form-horizontal check_out'} do |f| %>
+
+    <% if @check_out.errors.any? %>
+        <div id="error_expl" class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= pluralize(@check_out.errors.count, "error") %> prohibited these books from being
+              checked out:</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <% @check_out.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :card_barcode, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+        <%= f.text_field :card_barcode, :class => 'form-control' %>
+      </div>
+      <%= f.error_span(:card_barcode) %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :book_barcodes, :class => 'control-label col-lg-2' %>
+      <div class="col-lg-10">
+        <%= f.text_area :book_barcodes, :class => 'form-control', rows: 15 %>
+      </div>
+      <%= f.error_span(:book_barcodes) %>
+    </div>
+
+    <div class="form-group">
+      <div class="col-lg-offset-2 col-lg-10">
+        <%= f.submit 'Check Out', :class => 'btn btn-primary' %>
+      </div>
+    </div>
+
+<% end %>
