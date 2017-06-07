@@ -1,10 +1,13 @@
+puts 'Authors'
 a1 = Author.create!(name: 'Roger Hargreaves')
 a2 = Author.create!(name: 'Julia Donaldson')
 
+puts 'Genres'
 g1 = Genre.create(name: 'Fantasy')
 g2 = Genre.create(name: 'Funny')
 
-Book.create!(
+puts 'Books'
+b1 = Book.create!(
   title: 'Mr Happy',
   description: 'A book about a happy man.',
   author: a1,
@@ -28,7 +31,7 @@ Book.create!(
   height: 5
 )
 
-Book.create!(
+b2 = Book.create!(
   title: 'The Gruffalo',
   description: "The story of a mouse's walk through the woods.",
   author: a2,
@@ -36,9 +39,24 @@ Book.create!(
   height: 15
 )
 
-Card.create!(name: 'John Smith')
+puts 'Cards'
+c1 = Card.create!(name: 'John Smith')
 Card.create!(name: 'Brian Jones')
-Card.create!(name: 'Tony Ericson')
+c2 = Card.create!(name: 'Tony Ericson')
 Card.create!(name: 'Alice Ericson')
 Card.create!(name: 'Sonya Jump')
 
+puts 'Loans'
+Loan.create!(
+  card: c1,
+  book: b1,
+  expiry_date: Date.today + 14.days,
+  current: true
+)
+
+Loan.create!(
+  card: c2,
+  book: b2,
+  expiry_date: Date.today - 2.days,
+  current: true
+)

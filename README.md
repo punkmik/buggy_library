@@ -15,3 +15,4 @@ A simple library tracking app, written hastily, with intentional bugs.
 * Menu says Library Cards, but header says Cards
 * Clicking the X on flash messages doesn't dismiss the message.
 * Some flash success messages display twice on screen.
+* Loans says 'Expiry Date' but Overdue Books says 'Expiration Date'

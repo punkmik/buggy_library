@@ -3,6 +3,7 @@
   <strong>Card:</strong>
   <%= @loan.card.name %>
 </p>
+<%= '<%=' %>
 
 <p>
   <strong>Book:</strong>
@@ -11,7 +12,7 @@
 
 <p>
   <strong>Expiry date:</strong>
-  <%= @loan.expiry_date %>
+  <%= content_tag :span, @loan.expiry_date, class: expiry_date_class(@loan) %>
 </p>
 
 <%= link_to 'Back', loans_path %>
