@@ -16,3 +16,4 @@ A simple library tracking app, written hastily, with intentional bugs.
 * Clicking the X on flash messages doesn't dismiss the message.
 * Some flash success messages display twice on screen.
 * Loans says 'Expiry Date' but Overdue Books says 'Expiration Date'
+* Perhaps 'Library Cards' should be under Inventory (more of a discussion point) 

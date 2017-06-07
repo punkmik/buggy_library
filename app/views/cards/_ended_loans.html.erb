@@ -1,0 +1,23 @@
+<h2>Ended Loans</h2>
+<% if @card.loans.ended.any? %>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Book</th>
+        <th>Checked Out</th>
+        <th>Due</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @card.loans.ended.each do |loan| %>
+          <tr>
+            <td><%= loan.book.title %></td>
+            <td><%= loan.created_at %></td>
+            <td><%= loan.expiry_date %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    This card has not checked out a book before.
+<% end %>

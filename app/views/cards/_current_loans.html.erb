@@ -1,0 +1,25 @@
+<h2>Current Loans</h2>
+<% if @card.loans.current.any? %>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Barcode</th>
+        <th>Book</th>
+        <th>Checked Out</th>
+        <th>Due</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @card.loans.current.each do |loan| %>
+          <tr>
+            <td><%= loan.book.barcode %></td>
+            <td><%= loan.book.title %></td>
+            <td><%= loan.created_at %></td>
+            <td class="<%= expiry_date_class(loan) %>"><%= loan.expiry_date %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    This card has no books checked out right now.
+<% end %>
