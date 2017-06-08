@@ -68,7 +68,7 @@ b6 = Book.create!(
 puts 'Cards'
 c1 = Card.create!(name: 'John Smith', barcode: '*5dbfaf95-b*')
 c2 = Card.create!(name: 'Brian Jones', barcode: '*edb59f2b-5*')
-c3 = Card.create!(name: 'Tony Ericson', barcode: '*bf4d991b-e')
+c3 = Card.create!(name: 'Tony Ericson', barcode: '*bf4d991b-e*')
 c4 = Card.create!(name: 'Alice Ericson', barcode: '*5004990c-5*')
 c5 = Card.create!(name: 'Sonya Jump', barcode: '*097aa952-9*')
 
