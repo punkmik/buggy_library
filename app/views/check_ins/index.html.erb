@@ -21,7 +21,8 @@
     <div class="form-group">
       <%= f.label :card_barcode, :class => 'control-label col-lg-2' %>
       <div class="col-lg-10">
-        <%= f.text_field :card_barcode, :class => 'form-control' %>
+        <%= f.text_field :card_barcode, :class => 'form-control',
+                         :data => {:behaviour => 'card_barcode', :next => '#check_in_book_barcodes'} %>
       </div>
       <%= f.error_span(:card_barcode) %>
     </div>
