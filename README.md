@@ -17,3 +17,7 @@ A simple library tracking app, written hastily, with intentional bugs.
 * Some flash success messages display twice on screen.
 * Loans says 'Expiry Date' but Overdue Books says 'Expiration Date'
 * Perhaps 'Library Cards' should be under Inventory (more of a discussion point) 
+* Once a book has been veiewed the texte on the Delete button goes grey - changes state. Bad for accessibility
+* Edit view - field validation text is misaligned with the field 
+* Edit view - validation messaging is missing capitalisation and punctuation
+* Scientifc values appear if enetering 0.000004 into the height field
